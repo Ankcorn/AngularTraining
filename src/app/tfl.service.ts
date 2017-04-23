@@ -22,7 +22,7 @@ export class TflService {
   requestComplete$ = this.requestSource.asObservable(); //Lets everyone know the request is completed
 
   //makes a get request with the location data requested from googles geo api
-  getDisruptionData(from:string,to:string){
+  getData(from:string,to:string){
     this.http.get(this.Base_URL+from+'/to/'+to)
         .map(this.extractDisruption)
         .catch(this.handleError)
