@@ -1,11 +1,24 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
+import { trigger, state, style, animate, transition} from '@angular/core';
 
 import { TflService } from '../tfl.service'
 @Component({
   selector: 'app-disruption-list',
   templateUrl: './disruption-list.component.html',
   styleUrls: ['./disruption-list.component.css'],
+  animations: [
+    trigger('DisruptionElement', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition('void => *', [
+        style({transform: 'translateX(-100%)'}),
+        animate(300)
+      ]),
+      transition('* => void', [
+        animate(300, style({transform: 'translateX(100%)'}))
+      ])
+    ])
+  ]
 })
 
 export class DisruptionListComponent implements OnInit {
