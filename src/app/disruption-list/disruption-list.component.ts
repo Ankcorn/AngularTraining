@@ -19,12 +19,8 @@ export class DisruptionListComponent implements OnInit {
   }
  
   disruptionList = [];
- 
-
-
+  
   ngOnInit() {
+
   }
-
-
-
 }
