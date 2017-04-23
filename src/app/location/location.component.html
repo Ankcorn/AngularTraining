@@ -2,18 +2,18 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field col s12 m6">
-                <input id="fromLocation" type="text" class="validate">
+                <input id="fromLocation" type="text" class="validate" [(ngModel)]="from">
                 <label for="fromLocation">From</label>
             </div>
             <div class="input-field col s12 m6">
-                <input id="toLocation" type="text" class="validate">
+                <input id="toLocation" type="text" class="validate"[(ngModel)]="to">
                 <label for="toLocation">To</label>
             </div>
         </div>
         <div class="row">
             <div id="inputContainer" class="input-field col s12">
                 
-                <button class="btn waves-effect waves-light"> Search</button>
+                <button class="btn waves-effect waves-light" (click)="search()"> Search</button>
             </div>
         </div>
     </form>
