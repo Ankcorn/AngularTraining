@@ -19,12 +19,12 @@ export class DisruptionListComponent implements OnInit {
   }
  
   disruptionList = [];
- 
-
-
+  
   ngOnInit() {
+
   }
 
-
-
+  deleted(index:number){
+    this.disruptionList.splice(index,1)
+  }
 }
