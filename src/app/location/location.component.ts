@@ -11,6 +11,13 @@ export class LocationComponent implements OnInit {
 
   constructor() { }
 
+  fromInput($event:any){
+      this.from = $event.target.value
+  }
+  toInput($event:any){
+      this.to = $event.target.value
+  }
+  
   ngOnInit() {
   }
 
